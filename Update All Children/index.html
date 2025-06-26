@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Update All Children</title>
+</head>
+<body>
+  <div id="features">
+    <p>Fast performance</p>
+    <p>User friendly</p>
+    <p>Secure</p>
+  </div>
+  <button onclick="updateFeatures()">Add ✓ Prefix</button>
+
+  <script>
+    function updateFeatures() {
+      const featuresDiv = document.getElementById('features');
+      const paragraphs = featuresDiv.getElementsByTagName('p');
+      for (let p of paragraphs) {
+        if (!p.textContent.startsWith('✓')) {
+          p.textContent = '✓ ' + p.textContent;
+        }
+      }
+    }
+  </script>
+</body>
