@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Leaderboard</title>
+</head>
+<body>
+  <h2>Leaderboard</h2>
+  <div id="leaderboard"></div>
+
+  <script>
+    const names = ["Grace", "Arpit", "Lokendra", "Satyam"];
+    const leaderboardDiv = document.getElementById('leaderboard');
+    const ol = document.createElement('ol');
+    names.forEach(name => {
+      const li = document.createElement('li');
+        li.textContent = name;
+        ol.appendChild(li);
+    });
+    leaderboardDiv.appendChild(ol);
+    </script>
+</body>
+</html>
